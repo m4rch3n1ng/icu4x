@@ -129,6 +129,7 @@ part 'LocaleFallbackerWithConfig.g.dart';
 part 'LocaleParseError.g.dart';
 part 'Logger.g.dart';
 part 'NumericType.g.dart';
+part 'NumericValue.g.dart';
 part 'PluralCategories.g.dart';
 part 'PluralCategory.g.dart';
 part 'PluralOperands.g.dart';
@@ -385,6 +386,33 @@ final class _ResultDateTimeFfiInt32 extends ffi.Struct {
     final struct = ffi.Struct.create<_ResultDateTimeFfiInt32>();
     struct.isOk = false;
     struct.union.err = val;
+    return struct;
+  }
+}
+
+final class _ResultDoubleVoidUnion extends ffi.Union {
+  @ffi.Double()
+  external double ok;
+
+}
+
+final class _ResultDoubleVoid extends ffi.Struct {
+  external _ResultDoubleVoidUnion union;
+
+  @ffi.Bool()
+  external bool isOk;
+
+  // ignore: unused_element
+  factory _ResultDoubleVoid.ok(double val) {
+    final struct = ffi.Struct.create<_ResultDoubleVoid>();
+    struct.isOk = true;
+    struct.union.ok = val;
+    return struct;
+  }
+  // ignore: unused_element
+  factory _ResultDoubleVoid.err() {
+    final struct = ffi.Struct.create<_ResultDoubleVoid>();
+    struct.isOk = false;
     return struct;
   }
 }

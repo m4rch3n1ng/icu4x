@@ -36,6 +36,24 @@ let termini = Object.assign({
         ]
     },
 
+    "NumericValue.get": {
+        func: (selfValue) => icu.NumericValue.fromFields({
+            value: selfValue
+        }).get(),
+        // For avoiding webpacking minifying issues:
+        funcName: "NumericValue.get",
+        expr: (selfValue) => "icu.NumericValue.fromFields({\n    value: selfValue\n}).get()".replace(/([\( ])selfValue([,\) \n])/, '$1' + selfValue + '$2'),
+        parameters: [
+            
+            {
+                name: "self_value",
+                type: "number",
+                typeUse: "number"
+            }
+            
+        ]
+    },
+
     "CaseMapper.lowercase": {
         func: (s, localeName) => new icu.CaseMapper().lowercase(s, icu.Locale.fromString(localeName)),
         // For avoiding webpacking minifying issues:

@@ -32,6 +32,8 @@ export { BidiMirroringGlyph } from "./BidiMirroringGlyph.mjs"
 
 export { GeneralCategoryGroup } from "./GeneralCategoryGroup.mjs"
 
+export { NumericValue } from "./NumericValue.mjs"
+
 export { LineBreakOptions } from "./LineBreakOptions.mjs"
 
 export { CollatorResolvedOptions } from "./CollatorResolvedOptions.mjs"

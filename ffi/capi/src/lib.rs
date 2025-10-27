@@ -141,6 +141,8 @@ pub mod unstable {
     #[cfg(feature = "properties")]
     pub mod properties_names;
     #[cfg(feature = "properties")]
+    pub mod properties_nv;
+    #[cfg(feature = "properties")]
     pub mod properties_sets;
     #[cfg(feature = "properties")]
     pub mod properties_unisets;

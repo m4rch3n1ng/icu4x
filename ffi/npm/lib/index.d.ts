@@ -34,6 +34,8 @@ export { BidiMirroringGlyph, BidiMirroringGlyph_obj } from "./BidiMirroringGlyph
 
 export { GeneralCategoryGroup, GeneralCategoryGroup_obj } from "./GeneralCategoryGroup"
 
+export { NumericValue, NumericValue_obj } from "./NumericValue"
+
 export { LineBreakOptions, LineBreakOptions_obj } from "./LineBreakOptions"
 
 export { CollatorResolvedOptions } from "./CollatorResolvedOptions"
