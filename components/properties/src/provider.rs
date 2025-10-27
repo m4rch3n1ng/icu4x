@@ -148,6 +148,7 @@ const _: () = {
     impl_property_binary_xdigit_v1!(Baked);
     impl_property_binary_xid_continue_v1!(Baked);
     impl_property_binary_xid_start_v1!(Baked);
+    impl_property_enum_numeric_value_v1!(Baked);
     impl_property_enum_bidi_class_v1!(Baked);
     impl_property_enum_bidi_mirroring_glyph_v1!(Baked);
     impl_property_enum_canonical_combining_class_v1!(Baked);
@@ -736,6 +737,12 @@ icu_provider::data_marker!(
     is_singleton = true,
 );
 icu_provider::data_marker!(
+    /// Data marker for the 'NumericValue' Unicode property
+    PropertyEnumNumericValueV1,
+    PropertyCodePointMap<'static, NumericValue>,
+    is_singleton = true,
+);
+icu_provider::data_marker!(
     /// `PropertyBinaryBasicEmojiV1`
     PropertyBinaryBasicEmojiV1,
     PropertyUnicodeSet<'static>,
@@ -887,6 +894,7 @@ pub const MARKERS: &[DataMarkerInfo] = &[
     PropertyEnumVerticalOrientationV1::INFO,
     PropertyEnumWordBreakV1::INFO,
     PropertyEnumBidiMirroringGlyphV1::INFO,
+    PropertyEnumNumericValueV1::INFO,
     PropertyBinaryBasicEmojiV1::INFO,
     PropertyScriptWithExtensionsV1::INFO,
 ];

@@ -216,6 +216,7 @@ macro_rules! registry(
             icu::properties::provider::PropertyEnumVerticalOrientationV1: PropertyEnumVerticalOrientationV1,
             icu::properties::provider::PropertyEnumWordBreakV1: PropertyEnumWordBreakV1,
             icu::properties::provider::PropertyEnumBidiMirroringGlyphV1: PropertyEnumBidiMirroringGlyphV1,
+            icu::properties::provider::PropertyEnumNumericValueV1: PropertyEnumNumericValueV1,
             icu::properties::provider::PropertyBinaryBasicEmojiV1: PropertyBinaryBasicEmojiV1,
             icu::properties::provider::PropertyScriptWithExtensionsV1: PropertyScriptWithExtensionsV1,
             icu::segmenter::provider::SegmenterDictionaryExtendedV1: SegmenterDictionaryExtendedV1,

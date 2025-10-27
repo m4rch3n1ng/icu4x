@@ -95,6 +95,7 @@ pub mod provider;
 pub mod script;
 
 mod bidi;
+mod nv;
 mod trievalue;
 
 mod private {

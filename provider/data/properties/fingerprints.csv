@@ -81,6 +81,7 @@ property/enum/joining/group/v1, <singleton>, 1428B, 1370B, a24c126ff86065d8
 property/enum/joining/type/v1, <singleton>, 7136B, 7079B, 39f05bd0b9931b55
 property/enum/line/break/v1, <singleton>, 15328B, 15272B, d392409dfdd00a74
 property/enum/numeric/type/v1, <singleton>, 5900B, 5842B, 9ffe79ebbb54f863
+property/enum/numeric/value/v1, <singleton>, 14840B, 14782B, 2f5b3ba74e03c1f6
 property/enum/script/v1, <singleton>, 25902B, 25847B, 1b972fe75ad7b369
 property/enum/sentence/break/v1, <singleton>, 13964B, 13907B, 36e6dafc005907f8
 property/enum/vertical/orientation/v1, <singleton>, 3280B, 3222B, 36f945b6b4d90bc8

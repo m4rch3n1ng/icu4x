@@ -12,6 +12,7 @@ include!("property_binary_ids_binary_operator_v1.rs.data");
 include!("property_binary_radical_v1.rs.data");
 include!("property_binary_extender_v1.rs.data");
 include!("property_name_long_indic_syllabic_category_v1.rs.data");
+include!("property_enum_numeric_value_v1.rs.data");
 include!("property_binary_emoji_component_v1.rs.data");
 include!("property_binary_id_compat_math_continue_v1.rs.data");
 include!("property_binary_dash_v1.rs.data");
@@ -183,6 +184,7 @@ macro_rules! impl_data_provider {
         impl_property_binary_radical_v1!($provider);
         impl_property_binary_extender_v1!($provider);
         impl_property_name_long_indic_syllabic_category_v1!($provider);
+        impl_property_enum_numeric_value_v1!($provider);
         impl_property_binary_emoji_component_v1!($provider);
         impl_property_binary_id_compat_math_continue_v1!($provider);
         impl_property_binary_dash_v1!($provider);

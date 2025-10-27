@@ -9,5 +9,6 @@ mod bidi;
 mod bin_cp_set;
 mod emoji_set;
 mod enum_codepointtrie;
+mod nv;
 mod script;
 mod uprops_serde;

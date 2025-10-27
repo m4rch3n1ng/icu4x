@@ -6,8 +6,8 @@ use crate::bidi::BidiMirroringGlyph;
 use crate::props::{
     BidiClass, CanonicalCombiningClass, EastAsianWidth, GeneralCategory, GeneralCategoryGroup,
     GraphemeClusterBreak, HangulSyllableType, IndicConjunctBreak, IndicSyllabicCategory,
-    JoiningGroup, JoiningType, LineBreak, NumericType, Script, SentenceBreak, VerticalOrientation,
-    WordBreak,
+    JoiningGroup, JoiningType, LineBreak, NumericType, NumericValue, Script, SentenceBreak,
+    VerticalOrientation, WordBreak,
 };
 use crate::script::ScriptWithExt;
 use core::convert::TryInto;
@@ -51,6 +51,18 @@ impl TrieValue for BidiClass {
 
     fn to_u32(self) -> u32 {
         u32::from(self.0)
+    }
+}
+
+impl TrieValue for NumericValue {
+    type TryFromU32Error = core::convert::Infallible;
+
+    fn try_from_u32(i: u32) -> Result<Self, Self::TryFromU32Error> {
+        Ok(Self(i as i32))
+    }
+
+    fn to_u32(self) -> u32 {
+        self.0 as u32
     }
 }
 
