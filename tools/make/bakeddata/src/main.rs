@@ -84,6 +84,8 @@ fn main() {
     };
 
     let source = SourceDataProvider::new()
+        .with_icuexport(Path::new("/home/may/tmp/icuexport"))
+        .unwrap()
         .with_tzdb(Path::new("provider/source/tests/data/tzdb"))
         .unwrap();
 

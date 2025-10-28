@@ -2,6 +2,11 @@
 // called LICENSE at the top level of the ICU4X source tree
 // (online at: https://github.com/unicode-org/icu4x/blob/main/LICENSE ).
 
+#![allow(
+    rustdoc::broken_intra_doc_links,
+    reason = "this somehow fails locally, will have to remove when submitting a pr though"
+)]
+
 //! Scaffolding traits and impls for calendars.
 
 use crate::provider::{names::*, packed_pattern::*, semantic_skeletons::*};

@@ -61,6 +61,14 @@ fn main() -> eyre::Result<()> {
             .unwrap_or_else(|| std::env::temp_dir().join("icu4x-source-cache/"))
             .join(resource.rsplit("//").next().unwrap());
 
+        let temporary_local_cache = PathBuf::from(format!(
+            "/home/may/tmp/icu4x-cache/{}",
+            resource.rsplit("//").next().unwrap()
+        ));
+        if temporary_local_cache.exists() {
+            return Ok(temporary_local_cache);
+        }
+
         if !root.exists() {
             log::info!("Downloading {resource}");
             std::fs::create_dir_all(root.parent().unwrap())?;
